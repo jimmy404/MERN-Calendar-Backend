@@ -6,12 +6,8 @@ require('dotenv').config();
 const app = express();
 
 // Rutas
-// app.get('/', (req, res) => {
-//   console.log('Se require el /');
-//   res.json({
-//     ok: true
-//   })
-// });
+app.use('/api/auth', require('./routes/auth'));
+// TODO: CRUD: eventos
 
 // Directorio publico
 app.use(express.static('public'));
